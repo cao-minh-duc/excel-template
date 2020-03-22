@@ -1,0 +1,54 @@
+{
+    "name": "cao-minh-duc/excel-template",
+    "description": "",
+    "keywords": [
+        "cao-minh-duc",
+        "excel-template"
+    ],
+    "homepage": "https://github.com/cao-minh-duc/excel-template",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Cao Minh Duc",
+            "email": "caominhduc31081@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CaoMinhDuc\\ExcelTemplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CaoMinhDuc\\ExcelTemplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "CaoMinhDuc\\ExcelTemplate\\ExcelTemplateServiceProvider"
+            ],
+            "aliases": {
+                "ExcelTemplate": "CaoMinhDuc\\ExcelTemplate\\ExcelTemplateFacade"
+            }
+        }
+    }
+}
